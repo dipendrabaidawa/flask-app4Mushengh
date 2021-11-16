@@ -25,7 +25,7 @@ app.config.update(
     SECRET_KEY=config.SECRET_KEY)
 
 # Option config
-option_names = ("Fn", "Cm", "Nd", "Srp", "IT", "DRS", "Pd", "SRQ")
+option_names = ("Fn", "Cm", "Nd", "Srp", "IT", "DRS", "Pd", "SRQ_From", "SRQ_To")
 option_values = (
     ("fn_1", "fn_2", "fn_3", "fn_4", "fn_5", "fn_6", "fn_7", "fn_8", "fn_9", "fn_10", "fn_11", "fn_12", "fn_13", "fn_14", "fn_15", "fn_16"),
     ("cm_1", "cm_2", "cm_3", "cm_4", "cm_5", "cm_6", "cm_7", "cm_8", "cm_9", "cm_10", "cm_11", "cm_12", "cm_13", "cm_14", "cm_15", "cm_16", "cm_17", "cm_18", "cm_19", "cm_20", "cm_21", "cm_22", "cm_23", "cm_24", "cm_25", "cm_26", "cm_27", "cm_28"),
@@ -34,7 +34,8 @@ option_values = (
     ("it_1", "it_2", "it_3"),
     ("drs_1", "drs_2", "drs_3", "drs_4", "drs_5"),
     ("pd_1", "pd_2", "pd_3", "pd_4", "pd_5", "pd_6", "pd_7", "pd_8", "pd_9", "pd_10", "pd_11", "pd_12", "pd_13", "pd_14", "pd_15", "pd_16", "pd_17", "pd_18", "pd_19", "pd_20", "pd_21", "pd_22", "pd_23", "pd_24", "pd_25", "pd_26", "pd_27", "pd_28"),
-    ("srq_1", "srq_2", "srq_3", "srq_4", "srq_5", "srq_6", "srq_7", "srq_8", "srq_9", "srq_10", "srq_11", "srq_12")
+    ("srq_1_from", "srq_2_from", "srq_3_from", "srq_4_from", "srq_5_from", "srq_6_from", "srq_7_from", "srq_8_from", "srq_9_from", "srq_10_from", "srq_11_from", "srq_12_from"),
+    ("srq_1_to", "srq_2_to", "srq_3_to", "srq_4_to", "srq_5_to", "srq_6_to", "srq_7_to", "srq_8_to", "srq_9_to", "srq_10_to", "srq_11_to", "srq_12_to")
 )
 
 # display index page
