@@ -2,6 +2,7 @@
 
 from flask import Flask
 from flask.globals import request
+from flask.helpers import send_from_directory
 import config
 import os
 import decimal
@@ -22,6 +23,7 @@ app = Flask(__name__)
 
 app.config.update(
     DEBUG=config.DEBUG,
+    UPLOAD_FOLDER='excel_files',
     SECRET_KEY=config.SECRET_KEY)
 
 # Option config
@@ -92,4 +94,9 @@ def query():
         sheets_data.append({'sheet_name': sheet, 'data': df.to_dict()})
     
     return render_template("index.html", option_names=option_names, option_values=option_values, \
-        plots=stored_images, sheets_data=sheets_data)
+        plots=stored_images, sheets_data=sheets_data, filename=excel_file_name)
+
+@app.route('/download/<path:filename>', methods=['GET', 'POST'])
+def download(filename):
+    uploads = os.path.join(basedir, app.config['UPLOAD_FOLDER'])
+    return send_from_directory(directory=uploads, filename=filename)

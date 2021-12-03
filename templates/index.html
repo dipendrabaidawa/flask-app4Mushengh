@@ -56,7 +56,8 @@
             {% endfor %}
           </div>
           <div class="row params_panel align-self-end">
-            <div class="col offset-md-11">
+            <div class="col offset-md-9">
+              <a href="{% if filename %} /download/{{filename}} {% else %} # {% endif %}" class="btn btn-primary" disabled>Download</a>
               <button id="send_query" class="btn btn-primary" type="submit">Submit</button>
             </div>
           </div>
